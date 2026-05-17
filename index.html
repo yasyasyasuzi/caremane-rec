@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ケアマネREC｜介護支援専門員 音声記録</title>
+<link rel="manifest" href="data:application/json;base64,e3sKICAibmFtZSI6ICJcdTMwYjFcdTMwYTJcdTMwZGVcdTMwY2RSRUMiLAogICJzaG9ydF9uYW1lIjogIlx1MzBiMVx1MzBhMlx1MzBkZVx1MzBjZFJFQyIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmFmN2Y0IiwKICAidGhlbWVfY29sb3IiOiAiI2MxN2E0YSIsCiAgImljb25zIjogWwogICAge3sic3JjIjogImljb24ucG5nIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmcifX0KICBdCn19">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ケアマネREC">
+<meta name="theme-color" content="#c17a4a">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+:root {
+  --bg: #faf7f4;
+  --card: #ffffff;
+  --border: #e8ddd4;
+  --text: #2d2420;
+  --text-muted: #7a6560;
+  --text-faint: #b5a89e;
+  --primary: #c17a4a;
+  --primary-light: #f5ede4;
+  --accent: #a05c3a;
+  --accent-light: #fdf0e8;
+  --danger: #ef4444;
+  --radius: 1rem;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+/* HEADER */
+header {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(250,247,244,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e8ddd4;
+  padding: 14px 20px;
+}
+.logo-img { height: 44px; width: auto; object-fit: contain; }
+
+/* MAIN */
+main { padding: 16px; max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+
+/* CARD */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* BAND HEADER */
+.band {
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.band-rec {
+  background: linear-gradient(90deg, rgba(193,122,74,0.15), rgba(160,92,58,0.06));
+  border-bottom: 1px solid rgba(193,122,74,0.2);
+}
+.band-ai {
+  background: linear-gradient(90deg, #a05c3a, #c17a4a);
+  border-bottom: 1px solid rgba(139,92,246,0.4);
+  justify-content: space-between;
+}
+.band-dot-rec {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #c17a4a;
+}
+.band-dot-rec.recording { background: var(--danger); animation: blink 1s infinite; }
+.band-text-rec { font-size: 14px; font-weight: 700; color: #8a5535; }
+.rec-live { margin-left: auto; display:none; align-items: center; gap: 4px; color: var(--danger); font-size: 12px; font-weight: 700; }
+.rec-live.show { display: flex; }
+.band-text-ai { font-size: 14px; font-weight: 700; color: white; display: flex; align-items: center; gap: 6px; }
+.claude-pill {
+  background: rgba(255,255,255,0.25); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 2px 10px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; color: white;
+}
+
+/* RECORDING INDICATOR */
+.recording-status {
+  display: none;
+  align-items: center; gap: 8px;
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  font-size: 14px; font-weight: 600; color: var(--danger);
+}
+.recording-status.show { display: flex; }
+.recording-status-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--danger);
+  animation: blink 1s infinite;
+  flex-shrink: 0;
+}
+.recording-status-timer {
+  margin-left: auto;
+  font-size: 13px; font-variant-numeric: tabular-nums;
+  color: var(--danger); font-weight: 700;
+}
+
+/* TEXTAREA */
+.card-body { padding: 14px; }
+.textarea {
+  width: 100%; min-height: 150px;
+  background: transparent; border: none; outline: none;
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-size: 18px; line-height: 1.85; color: var(--text);
+  resize: none;
+}
+.textarea::placeholder { color: var(--text-faint); font-size: 16px; }
+.char-row {
+  display: flex; justify-content: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 8px; margin-top: 8px;
+}
+.char-count { font-size: 12px; color: var(--text-faint); }
+
+/* TRANSCRIBE LOADING */
+.transcribe-loading {
+  display: none; align-items: center; gap: 8px;
+  color: var(--accent); font-size: 14px; padding: 8px 0;
+}
+.transcribe-loading.show { display: flex; }
+
+/* FORMAT TOGGLE */
+.format-row { display: flex; gap: 8px; margin-bottom: 14px; }
+.fmt-btn {
+  flex: 1; padding: 10px 8px;
+  border-radius: 0.75rem;
+  border: 2.5px solid var(--border);
+  background: #faf7f4;
+  color: var(--text-muted);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.fmt-btn.active {
+  background: #fdf0e8;
+  border-color: #c17a4a;
+  color: #c17a4a;
+}
+
+/* AI SPINNER */
+.ai-spinner { display: none; align-items: center; gap: 8px; color: var(--primary); font-size: 14px; margin-bottom: 10px; }
+.ai-spinner.show { display: flex; }
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid currentColor; border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* AI OUTPUT */
+.ai-output {
+  width: 100%; min-height: 240px;
+  background: #faf7f4;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px; line-height: 1.85; color: var(--text);
+  resize: vertical; outline: none;
+  margin-bottom: 14px;
+}
+.ai-output::placeholder { color: var(--text-faint); font-size: 15px; }
+
+/* BUTTONS */
+.btn-ai-run {
+  width: 100%; padding: 16px;
+  background: linear-gradient(135deg, #c17a4a, #a05c3a);
+  color: white; border: none;
+  border-radius: var(--radius);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px; font-weight: 700;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(193,122,74,0.35);
+  margin-bottom: 10px;
+}
+.btn-ai-run:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn-ai-run:not(:disabled):active { transform: scale(0.98); }
+
+.btn-row { display: flex; gap: 10px; }
+.btn-copy {
+  flex: 1; padding: 13px 8px;
+  border-radius: 0.75rem;
+  border: 2px solid rgba(193,122,74,0.3);
+  background: oklch(0.95 0.03 310);
+  color: var(--primary);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.18s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-clear {
+  flex: 1; padding: 13px 8px;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--text-muted);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.18s;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.btn-copy:active, .btn-clear:active { transform: scale(0.97); }
+
+/* FLOATING BUTTON */
+.float-mic {
+  position: fixed; bottom: 24px;
+  left: 50%; transform: translateX(-50%);
+  z-index: 50;
+}
+
+.mic-btn {
+  position: relative;
+  width: 80px; height: 80px; border-radius: 50%;
+  border: none; cursor: pointer;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  background: linear-gradient(135deg, #c17a4a, #a05c3a);
+  color: white;
+  box-shadow: 0 20px 40px rgba(193,122,74,0.35);
+}
+.mic-btn::after {
+  content: '';
+  position: absolute; inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(193,122,74,0.3);
+  pointer-events: none;
+}
+.mic-btn:hover { transform: scale(1.05); }
+.mic-btn:active { transform: scale(0.95); }
+.mic-btn.recording {
+  background: var(--danger);
+  box-shadow: 0 20px 40px rgba(239,68,68,0.4);
+  transform: scale(1.1);
+}
+.mic-btn.recording::after { border-color: rgba(239,68,68,0.5); }
+.mic-btn.recording:active { transform: scale(1.0); }
+
+/* 波紋アニメーション */
+.mic-pulse1, .mic-pulse2 {
+  display: none;
+  position: absolute; inset: 0; border-radius: 50%;
+}
+.mic-btn.recording .mic-pulse1 {
+  display: block;
+  background: var(--danger);
+  animation: ping 1.2s cubic-bezier(0,0,0.2,1) infinite;
+  opacity: 0.3;
+}
+.mic-btn.recording .mic-pulse2 {
+  display: block;
+  background: rgba(239,68,68,0.2);
+  animation: pulse-slow 1.5s ease-in-out infinite;
+}
+@keyframes ping {
+  75%, 100% { transform: scale(1.8); opacity: 0; }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; } 50% { opacity: 0.4; }
+}
+
+.mic-timer {
+  position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+  font-size: 12px; font-weight: 600;
+  color: var(--text-muted); font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  opacity: 0; transition: opacity 0.3s;
+}
+.mic-timer.visible { opacity: 1; }
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: 130px; left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: oklch(0.2 0.02 300); color: white;
+  padding: 10px 22px; border-radius: 100px;
+  font-size: 13px; font-weight: 500;
+  opacity: 0; transition: all 0.25s;
+  pointer-events: none; z-index: 300;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+/* MODE TOGGLE */
+.mode-toggle {
+  margin-left: auto;
+  display: flex; align-items: center; gap: 6px;
+  cursor: pointer;
+  user-select: none;
+  padding: 3px 8px 3px 6px;
+  border-radius: 100px;
+  background: rgba(193,122,74,0.08);
+  border: 1px solid rgba(193,122,74,0.2);
+  transition: all 0.2s;
+}
+.mode-toggle:hover { background: rgba(193,122,74,0.15); }
+.mode-label {
+  font-size: 11px; font-weight: 700;
+  color: #8a5535;
+  white-space: nowrap;
+  min-width: 44px;
+  text-align: center;
+}
+.mode-switch {
+  width: 28px; height: 16px;
+  border-radius: 100px;
+  background: #c17a4a;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.mode-switch::after {
+  content: '';
+  position: absolute;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: white;
+  top: 2px; left: 2px;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.mode-toggle.native .mode-switch {
+  background: #7c9e6a;
+}
+.mode-toggle.native .mode-switch::after {
+  transform: translateX(12px);
+}
+.mode-toggle.native .mode-label {
+  color: #4a7a38;
+}
+
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<header style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:44px;height:44px;background:linear-gradient(135deg,#c17a4a,#a05c3a);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <div style="font-size:20px;font-weight:800;color:#c17a4a;letter-spacing:-0.02em;font-family:sans-serif;">ケアマネREC</div>
+      <div style="font-size:11px;color:#b5a89e;letter-spacing:0.06em;">介護支援専門員 音声記録</div>
+    </div>
+  </div>
+  <button onclick="showInstallGuide()" style="
+    background:rgba(193,122,74,0.12);
+    border:1.5px solid rgba(193,122,74,0.3);
+    border-radius:100px;
+    padding:7px 12px;
+    font-size:11px;font-weight:700;
+    color:#c17a4a;
+    cursor:pointer;
+    display:flex;align-items:center;gap:4px;
+    white-space:nowrap;flex-shrink:0;
+  ">📲 ホームに追加</button>
+</header>
+
+<!-- ホーム画面追加ガイド -->
+<div id="installGuide" style="
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(4px);
+  z-index:1000;
+  align-items:center;justify-content:center;
+  padding:20px;
+">
+  <div style="
+    background:white;border-radius:24px;
+    padding:32px 28px;max-width:380px;width:100%;
+    position:relative;
+  ">
+    <button onclick="hideInstallGuide()" style="
+      position:absolute;top:16px;right:16px;
+      background:none;border:none;font-size:20px;
+      color:#b5a89e;cursor:pointer;padding:4px;
+    ">✕</button>
+    <div style="font-size:32px;text-align:center;margin-bottom:16px;">📲</div>
+    <div style="font-size:20px;font-weight:800;color:#2d2420;text-align:center;margin-bottom:8px;">ホーム画面に追加</div>
+    <div style="font-size:13px;color:#7a6560;text-align:center;margin-bottom:24px;">アプリのように使えるようになります</div>
+
+    <div style="background:#faf7f4;border-radius:16px;padding:20px;margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:800;color:#c17a4a;margin-bottom:12px;">🍎 iPhoneの場合（Safari）</div>
+      <div style="font-size:14px;color:#2d2420;line-height:2;">
+        ① 下部の <strong>「共有」ボタン</strong>（四角から矢印）をタップ<br>
+        ② <strong>「ホーム画面に追加」</strong> を選択<br>
+        ③ <strong>「追加」</strong> をタップして完了
+      </div>
+    </div>
+
+    <div style="background:#faf7f4;border-radius:16px;padding:20px;">
+      <div style="font-size:13px;font-weight:800;color:#c17a4a;margin-bottom:12px;">🤖 Androidの場合（Chrome）</div>
+      <div style="font-size:14px;color:#2d2420;line-height:2;">
+        ① 右上の <strong>「⋮」メニュー</strong> をタップ<br>
+        ② <strong>「ホーム画面に追加」</strong> を選択<br>
+        ③ <strong>「追加」</strong> をタップして完了
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- 録音テキスト -->
+  <div class="card">
+    <div class="band band-rec">
+      <div class="band-dot-rec" id="bandDot"></div>
+      <span class="band-text-rec">録音テキスト（編集可）</span>
+      <div class="rec-live" id="recLive">
+        <span>●</span><span>録音中</span>
+      </div>
+      <!-- 入力モードトグル -->
+      <div class="mode-toggle" id="modeToggle" onclick="toggleInputMode()" title="入力モード切替">
+        <span class="mode-label" id="modeLabel">Whisper</span>
+        <div class="mode-switch" id="modeSwitch"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="recording-status" id="recordingStatus">
+        <div class="recording-status-dot"></div>
+        <span>録音中… 話してください</span>
+        <span class="recording-status-timer" id="statusTimer">0:00</span>
+      </div>
+      <div class="transcribe-loading" id="transcribeLoading">
+        <div class="spinner" style="color:var(--accent)"></div>
+        <span>文字起こし中…</span>
+      </div>
+      <textarea class="textarea" id="transcriptArea"
+        placeholder="STARTをタップして話してください。&#10;面談内容・調整経過・モニタリング内容など&#10;STOPで録音終了 → 自動で文字起こしされます。"></textarea>
+      <div class="char-row">
+        <span class="char-count" id="charCount">0文字</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI清書 -->
+  <div class="card">
+    <div class="band band-ai">
+      <div class="band-text-ai">✦ AI 清書</div>
+      <div class="claude-pill">Claude</div>
+    </div>
+    <div class="card-body">
+      <div class="format-row">
+        <button class="fmt-btn active" id="fmtProse" onclick="setFormat('prose')">📝 通常文章</button>
+        <button class="fmt-btn" id="fmtBullet" onclick="setFormat('bullet')">📋 整理形式</button>
+      </div>
+      <div class="ai-spinner" id="aiSpinner">
+        <div class="spinner"></div>
+        <span>AI清書中…</span>
+      </div>
+      <textarea class="ai-output" id="aiOutput"
+        placeholder="「AI清書する」ボタンを押すと報告書文体に整形します。"></textarea>
+      <button class="btn-ai-run" id="aiBtn" onclick="runAI()" disabled>✦ AI清書する</button>
+      <div class="btn-row">
+        <button class="btn-copy" onclick="copyText()">✦ AI清書をコピー</button>
+        <button class="btn-clear" onclick="clearAll()">🗑️ クリア</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- フローティングボタン -->
+<div class="float-mic">
+  <button class="mic-btn" id="micBtn" onclick="toggleRecording()">
+    <div class="mic-pulse1"></div>
+    <div class="mic-pulse2"></div>
+    <span style="position:relative;z-index:10;font-size:14px;font-weight:700;letter-spacing:2px;" id="micLabel">START</span>
+    <div class="mic-timer" id="micTimer">0:00</div>
+  </button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── 状態 ──
+let isRecording = false;
+let timerInterval = null;
+let seconds = 0;
+let accumulated = '';
+let outputFormat = 'prose';
+let mediaRecorder = null;
+let audioChunks = [];
+let recognition = null;
+let accumulated_before_stop = '';
+let inputMode = 'whisper'; // 'whisper' or 'native'
+
+// ── 入力モード切替 ──
+function toggleInputMode() {
+  if (isRecording) { showToast('録音中は切り替えられません'); return; }
+  inputMode = inputMode === 'whisper' ? 'native' : 'whisper';
+  const toggle = document.getElementById('modeToggle');
+  const label = document.getElementById('modeLabel');
+  if (inputMode === 'native') {
+    toggle.classList.add('native');
+    label.textContent = '端末音声';
+    showToast('端末音声入力モードに切替（リアルタイム表示）');
+  } else {
+    toggle.classList.remove('native');
+    label.textContent = 'Whisper';
+    showToast('Whisper AIモードに切替（高精度）');
+  }
+}
+
+// ── ホーム画面追加ガイド ──
+function showInstallGuide() {
+  const el = document.getElementById('installGuide');
+  el.style.display = 'flex';
+}
+function hideInstallGuide() {
+  document.getElementById('installGuide').style.display = 'none';
+}
+document.getElementById('installGuide').addEventListener('click', function(e) {
+  if (e.target === this) hideInstallGuide();
+});
+
+// ── フォーマット ──
+function setFormat(fmt) {
+  outputFormat = fmt;
+  document.getElementById('fmtProse').classList.toggle('active', fmt === 'prose');
+  document.getElementById('fmtBullet').classList.toggle('active', fmt === 'bullet');
+  const hasTranscript = document.getElementById('transcriptArea').value.trim();
+  const hasAiOutput = document.getElementById('aiOutput').value.trim();
+  if (hasTranscript && hasAiOutput) runAI();
+}
+
+// ── 専門用語辞書（約300語・医療3：介護7） ──
+const CORRECTIONS = {
+  // ── バイタル・医療基礎 ──
+  'えすぴーおーつー':'SpO2','けつあつ':'血圧','みゃくはく':'脈拍','たいおん':'体温',
+  'こきゅうすう':'呼吸数','じぇーしーえす':'JCS','じーしーえす':'GCS',
+  'いしきしょうがい':'意識障害','こうけつあつ':'高血圧','ていけつあつ':'低血圧',
+  'きりつせいていけつあつ':'起立性低血圧','しんふぜん':'心不全',
+  'のうこうそく':'脳梗塞','のうしゅっけつ':'脳出血',
+  'とうにょうびょう':'糖尿病','いんすりん':'インスリン','けつとう':'血糖',
+  'じんふぜん':'腎不全','とうせき':'透析','ふくまくとうせき':'腹膜透析',
+  'はいえん':'肺炎','ごえんせいはいえん':'誤嚥性肺炎','ごえん':'誤嚥',
+  'えんげしょうがい':'嚥下障害','こうくうケア':'口腔ケア',
+  'じょくそう':'褥瘡','はっせき':'発赤','ふしゅ':'浮腫','むくみ':'浮腫',
+  'にんちしょう':'認知症','びーぴーえすでぃ':'BPSD','せんもう':'せん妄',
+  'よくうつ':'抑うつ','はんだんのうりょく':'判断能力',
+  'まひ':'麻痺','へんまひ':'片麻痺','えーでぃーえる':'ADL','あいえーでぃーえる':'IADL',
+  'ふくやくかんり':'服薬管理','ぽりふぁーましー':'ポリファーマシー',
+  'けいかんえいよう':'経管栄養','ぺぐ':'PEG','いろう':'胃ろう',
+  'ざいたくさんそ':'在宅酸素','ほっぷ':'HOT','じんこうこきゅうき':'人工呼吸器',
+  'かんわけあ':'緩和ケア','たーみなるけあ':'ターミナルケア',
+  'えむえむえすい':'MMSE','えいちでぃーえすあーる':'HDS-R',
+  'どねぺじる':'ドネペジル','ありせぷと':'アリセプト','めまんちん':'メマンチン',
+  'りすぺりどん':'リスペリドン','はるしおん':'ハルシオン','べるそむら':'ベルソムラ',
+  'まぐみっと':'マグミット','らんそぷらぞーる':'ランソプラゾール',
+  'ほうもんかんご':'訪問看護','ほうもんしんりょう':'訪問診療',
+  // ── 介護保険制度 ──
+  'かいごほけん':'介護保険','ほけんしゃ':'保険者','ひほけんしゃ':'被保険者',
+  'だいいちごうひほけんしゃ':'第一号被保険者','だいにごうひほけんしゃ':'第二号被保険者',
+  'ようかいご':'要介護','ようしえん':'要支援',
+  'ようかいごいち':'要介護1','ようかいごに':'要介護2','ようかいごさん':'要介護3',
+  'ようかいごし':'要介護4','ようかいごご':'要介護5',
+  'ようしえんいち':'要支援1','ようしえんに':'要支援2',
+  'かいごにんてい':'介護認定','にんていちょうさ':'認定調査',
+  'にんていちょうさひょう':'認定調査票','にじはんてい':'二次判定',
+  'かいごにんていしんさかい':'介護認定審査会',
+  'くいたん':'区分支給限度額','きゅうふかんり':'給付管理',
+  'かいごほけんしょ':'介護保険証','にんていゆうこうきかん':'認定有効期間',
+  'こうしんにんてい':'更新認定','へんこうにんてい':'変更認定',
+  'こうがくかいごさーびすひ':'高額介護サービス費',
+  // ── ケアマネジメント ──
+  'けあまねじゃー':'ケアマネジャー','けあまね':'ケアマネ',
+  'かいごしえんせんもんいん':'介護支援専門員','しゅにんけあまねじゃー':'主任ケアマネジャー',
+  'けあぷらん':'ケアプラン','きょたくけあぷらん':'居宅ケアプラン',
+  'きょたくさーびすけいかくしょ':'居宅サービス計画書',
+  'さーびすたんとうしゃかいぎ':'サービス担当者会議','たんとうしゃかいぎ':'担当者会議',
+  'けあかんたーれんす':'ケアカンファレンス','かんたーれんす':'カンファレンス',
+  'もにたりんぐ':'モニタリング','もにたりんぐほうもん':'モニタリング訪問',
+  'あせすめんと':'アセスメント','にーず':'ニーズ','かだいせいり':'課題整理',
+  'しえんけいか':'支援経過','しえんけいかきろく':'支援経過記録',
+  'きょたくかいごしえんじぎょうしょ':'居宅介護支援事業所',
+  'いこうかくにん':'意向確認','めんだん':'面談','ていきほうもん':'定期訪問',
+  'きんきゅうほうもん':'緊急訪問','でんわれんらく':'電話連絡',
+  'れんらくちょうせい':'連絡調整','たしょくしゅれんけい':'多職種連携',
+  'れんけいかいぎ':'連携会議','ちいきれんけい':'地域連携',
+  'かかりつけい':'かかりつけ医','しゅちい':'主治医','ほうもんい':'訪問医',
+  'もにたりんぐほうこくしょ':'モニタリング報告書',
+  'さーびすたんとうしゃかいぎろく':'サービス担当者会議録',
+  'きょたくさーびすけいかくしょいち':'居宅サービス計画書1表',
+  'きょたくさーびすけいかくしょに':'居宅サービス計画書2表',
+  'しゅうかんさーびすけいかくひょう':'週間サービス計画表',
+  'かだいせいりそうごうひょう':'課題整理総括表',
+  // ── 居宅サービス ──
+  'きょたくさーびす':'居宅サービス','ほうもんかいご':'訪問介護',
+  'ほうもんにゅうよく':'訪問入浴','ほうもんりはびり':'訪問リハビリ',
+  'きょたくりょうようかんりしどう':'居宅療養管理指導',
+  'つうしょかいご':'通所介護','でいさーびす':'デイサービス',
+  'つうしょりはびり':'通所リハビリ','でいけあ':'デイケア',
+  'しょーとすてい':'ショートステイ',
+  'たんきにゅうしょせいかつかいご':'短期入所生活介護',
+  'たんきにゅうしょりょうようかいご':'短期入所療養介護',
+  'ふくしようぐたいよ':'福祉用具貸与','ふくしようぐ':'福祉用具',
+  'じゅうたくかいしゅう':'住宅改修','てすり':'手すり','だんさかいしょう':'段差解消',
+  'ていきじゅんかいずいじたいおう':'定期巡回随時対応',
+  'やかんじゅんかい':'夜間巡回','ていきじゅんかい':'定期巡回',
+  'しょうきぼたきのうがたきょたくかいご':'小規模多機能型居宅介護',
+  'しょうきぼたきのう':'小規模多機能','かんたき':'看多機',
+  'ちいきみっちゃくがたつうしょかいご':'地域密着型通所介護',
+  'にんちしょうたいおうがたつうしょかいご':'認知症対応型通所介護',
+  // ── 施設サービス ──
+  'とくようほーむ':'特養ホーム','とくべつようごろうじんほーむ':'特別養護老人ホーム',
+  'とくよう':'特養','ろうけんしせつ':'老健施設',
+  'かいごろうじんほけんしせつ':'介護老人保健施設','ろうけん':'老健',
+  'かいごいりょういん':'介護医療院',
+  'ぐるーぷほーむ':'グループホーム',
+  'さーびすつきこうれいしゃじゅうたく':'サービス付き高齢者住宅',
+  'さこうじゅう':'サ高住','にゅうしょまち':'入所待ち','にゅうしょはんてい':'入所判定',
+  // ── 地域支援 ──
+  'ちいきほうかつしえんせんたー':'地域包括支援センター',
+  'ちいきほうかつ':'地域包括','ほうかつ':'包括',
+  'しゃかいふくしし':'社会福祉士','ほけんし':'保健師',
+  'しゅにんけあまね':'主任ケアマネ','ちいきしえんじぎょう':'地域支援事業',
+  'かいごよぼう':'介護予防','かいごよぼうけあぷらん':'介護予防ケアプラン',
+  'かいごよぼうしえん':'介護予防支援',
+  'そうごうじぎょう':'総合事業','にちじょうせいかつしえんそうごうじぎょう':'日常生活支援総合事業',
+  'ちいきかつどうしえんじぎょう':'地域活動支援事業',
+  'ちいきこうりゅう':'地域交流','かよいのば':'通いの場',
+  'ちいきさろん':'地域サロン','かいごよぼうきょうしつ':'介護予防教室',
+  'こくほれん':'国保連','こくみんけんこうほけんだんたいれんごうかい':'国民健康保険団体連合会',
+  // ── 権利擁護・成年後見 ──
+  'せいねんこうけん':'成年後見','せいねんこうけんにん':'成年後見人',
+  'にんいこうけん':'任意後見','ほうていこうけん':'法定後見',
+  'しゃかいふくしきょうぎかい':'社会福祉協議会','しゃきょう':'社協',
+  'にちじょうせいかつじりつしえんじぎょう':'日常生活自立支援事業',
+  'ぎゃくたいぼうし':'虐待防止','こうれいしゃぎゃくたい':'高齢者虐待',
+  'しんたいてきぎゃくたい':'身体的虐待','しんりてきぎゃくたい':'心理的虐待',
+  'けいざいてきぎゃくたい':'経済的虐待','かいごほうき':'介護放棄',
+  'つうほう':'通報','たちいりちょうさ':'立入調査',
+  'けあらー':'ケアラー','ヤングけあらー':'ヤングケアラー',
+  'かぞくかいご':'家族介護','かいごふたん':'介護負担','かいごりょく':'介護力',
+  'どくきょ':'独居','どくきょこうれいしゃ':'独居高齢者','どうきょ':'同居',
+  'ろうろうかいご':'老老介護','にんにんかいご':'認認介護',
+  // ── 住環境・福祉用具 ──
+  'じゅうきょかんきょう':'住居環境','やかいしんだん':'家屋診断',
+  'じゅうたくかいしゅうそうだん':'住宅改修相談',
+  'しゃりんいす':'車椅子','ほこうき':'歩行器','つえ':'杖',
+  'よつあしつえ':'四脚杖','かいごべっど':'介護ベッド',
+  'えあーまっとれす':'エアーマットレス','ぽーたぶるといれ':'ポータブルトイレ',
+  'にょうき':'尿器','ほこうほじょぐ':'歩行補助具',
+  // ── アセスメントツール・書類 ──
+  'びーあい':'BI','ばーせるいんでっくす':'Barthel Index','ふぃむ':'FIM',
+  'にんちしょうじりつど':'認知症自立度','しょうがいこうれいしゃじりつど':'障害高齢者自立度',
+  'かいごきゅうふひめいさいしょ':'介護給付費明細書',
+  'さーびすていきょうひょう':'サービス提供票','じつせきほうこくしょ':'実績報告書',
+  'いしのいけんしょ':'医師の意見書','とくきじこう':'特記事項',
+  'どうい':'同意','せつめいどうい':'説明同意',
+  // ── 関係職種 ──
+  'へるぱー':'ヘルパー','ほうもんかいごいん':'訪問介護員',
+  'かんごし':'看護師','りがくりょうほうし':'理学療法士',
+  'さぎょうりょうほうし':'作業療法士','げんごちょうかくし':'言語聴覚士',
+  'かんりえいようし':'管理栄養士','やくざいし':'薬剤師',
+  'しかいし':'歯科医師','しかえいせいし':'歯科衛生士',
+  // ── 介護保険追加 ──
+  'かいごほけんかいせい':'介護保険改正','さーびすじぎょうしょ':'サービス事業所',
+  'かいごほうしゅう':'介護報酬','かいごほうしゅうかいてい':'介護報酬改定',
+  'じぎょうしょひょうか':'事業所評価','しつのかんり':'質の管理',
+  'ゆにっとけあ':'ユニットケア','ぱーそんせんたーどけあ':'パーソンセンタードケア',
+  'じりつしえん':'自立支援','あくてぃびてぃ':'アクティビティ',
+  'れくりえーしょん':'レクリエーション','りはびりてーしょん':'リハビリテーション',
+  'きのうくんれん':'機能訓練','にちじょうせいかつどうさ':'日常生活動作',
+  'いどう':'移動','いじょう':'移乗','はいせつ':'排泄','にゅうよく':'入浴',
+  'しょくじかいじょ':'食事介助','ちゃくだつかいじょ':'着脱介助',
+  'こうくうかいじょ':'口腔介助','せいようせいけつ':'整容清潔',
+  'たいいへんかん':'体位変換','きょしょうへんかん':'臥床変換',
+  'がいしゅつかいじょ':'外出介助','つういんかいじょ':'通院介助',
+  'かいごきろく':'介護記録','けあきろく':'ケア記録',
+  'ひやりはっと':'ヒヤリハット','じこほうこく':'事故報告',
+  'さぽーとぷらん':'サポートプラン','こべつけあぷらん':'個別ケアプラン',
+  'せいかつこうい':'生活行為','せいかつきのう':'生活機能',
+  'かいごよぼうひょうか':'介護予防評価','せいかつきのうひょうか':'生活機能評価',
+  'こうれいしゃそうごうきのうひょうか':'高齢者総合機能評価',
+  'しゃかいてきこりつ':'社会的孤立','しゃかいさんか':'社会参加',
+  'ちいきいこう':'地域移行','ざいたくいこう':'在宅移行',
+  'にゅうたいいん':'入退院','にゅういんちょうせい':'入院調整',
+  'たいいんちょうせい':'退院調整','たいいんしえん':'退院支援',
+  'びょういんれんけい':'病院連携','いりょうれんけい':'医療連携',
+  'ざいたくりょうよう':'在宅療養','ざいたくふっき':'在宅復帰',
+  'みとり':'看取り','みとりけあ':'看取りケア','えんどおぶらいふ':'エンドオブライフ',
+  'あどばんすけあぷらんにんぐ':'アドバンスケアプランニング',
+  'えーしーぴー':'ACP','いりょうとかいごのれんけい':'医療と介護の連携',
+  'ちいきほうかつけあしすてむ':'地域包括ケアシステム',
+  'ちいきほうかつけあ':'地域包括ケア','じぶんらしさ':'自分らしさ',
+  'そんげんのし':'尊厳の死','くおりてぃおぶらいふ':'クオリティオブライフ',
+  'きゅーおーえる':'QOL','いじそんげん':'意思尊厳',
+  'せいかつのしつ':'生活の質','にんげんのそんげん':'人間の尊厳',
+};
+function applyCorrections(text) {
+  let r = text;
+  for (const [k,v] of Object.entries(CORRECTIONS)) r = r.replace(new RegExp(k,'g'),v);
+  return r;
+}
+
+// ── ビープ音 ──
+function playBeep(type) {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.type = 'sine';
+    osc.frequency.value = type === 'start' ? 660 : 440;
+    gain.gain.setValueAtTime(0.2, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+    osc.start(); osc.stop(ctx.currentTime + 0.1);
+  } catch(e) {}
+}
+
+// ── 振動 ──
+function vibrate() { if (navigator.vibrate) navigator.vibrate(60); }
+
+// ── Web Speech API リアルタイム ──
+function startRealtime() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) return;
+  const rt = new SR();
+  rt.lang = 'ja-JP'; rt.continuous = true; rt.interimResults = true;
+  rt.onresult = e => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) accumulated += applyCorrections(e.results[i][0].transcript);
+      else interim += e.results[i][0].transcript;
+    }
+    const area = document.getElementById('transcriptArea');
+    area.value = accumulated + interim;
+    area.scrollTop = area.scrollHeight;
+    updateCharCount(); updateAiBtn();
+  };
+  rt.onerror = e => { if (e.error === 'no-speech' || e.error === 'aborted') return; };
+  rt.onend = () => { if (isRecording) try { rt.start(); } catch(e) {} };
+  try { rt.start(); recognition = rt; } catch(e) {}
+}
+
+function stopRealtime() {
+  if (recognition) { try { recognition.stop(); } catch(e) {} recognition = null; }
+}
+
+// ── 録音 ──
+function toggleRecording() {
+  vibrate();
+  if (isRecording) stopRecording(); else startRecording();
+}
+
+function startRecording() {
+  if (inputMode === 'native') {
+    // ── 端末音声入力モード（Web Speech API のみ） ──
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { showToast('このブラウザは端末音声入力に対応していません'); return; }
+    isRecording = true; seconds = 0;
+    timerInterval = setInterval(() => {
+      seconds++;
+      const m = Math.floor(seconds/60), s = seconds%60;
+      const timeStr = m+':'+String(s).padStart(2,'0');
+      document.getElementById('micTimer').textContent = timeStr;
+      const st = document.getElementById('statusTimer');
+      if (st) st.textContent = timeStr;
+    }, 1000);
+    playBeep('start');
+    document.getElementById('transcriptArea').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setUI(true);
+    startRealtime();
+  } else {
+    // ── Whisper AIモード（元の動作） ──
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(stream => {
+        audioChunks = [];
+        const mimeType = MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : 'audio/mp4';
+        mediaRecorder = new MediaRecorder(stream, { mimeType });
+        mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+        mediaRecorder.onstop = async () => {
+          stream.getTracks().forEach(t => t.stop());
+          await sendToWhisper(new Blob(audioChunks, { type: mimeType }), mimeType);
+        };
+        mediaRecorder.start(1000);
+        isRecording = true; seconds = 0;
+        timerInterval = setInterval(() => {
+          seconds++;
+          const m = Math.floor(seconds/60), s = seconds%60;
+          const timeStr = m+':'+String(s).padStart(2,'0');
+          document.getElementById('micTimer').textContent = timeStr;
+          const st = document.getElementById('statusTimer');
+          if (st) st.textContent = timeStr;
+        }, 1000);
+        playBeep('start');
+        document.getElementById('transcriptArea').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setUI(true);
+        setTimeout(() => { if (isRecording) startRealtime(); }, 300);
+      })
+      .catch(() => showToast('マイクの許可が必要です'));
+  }
+}
+
+function stopRecording() {
+  accumulated_before_stop = accumulated;
+  isRecording = false; clearInterval(timerInterval);
+  stopRealtime();
+  playBeep('stop');
+  setUI(false);
+  if (inputMode === 'whisper') {
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+  }
+}
+
+async function sendToWhisper(blob, mimeType) {
+  document.getElementById('transcribeLoading').classList.add('show');
+  try {
+    const fd = new FormData();
+    fd.append('audio', blob, mimeType.includes('mp4') ? 'audio.mp4' : 'audio.webm');
+    const res = await fetch('/api/transcribe', { method:'POST', body:fd });
+    const data = await res.json();
+    if (data.text && data.text.trim()) {
+      accumulated = accumulated_before_stop + applyCorrections(data.text);
+      document.getElementById('transcriptArea').value = accumulated;
+      document.getElementById('transcriptArea').scrollTop = 999999;
+      updateCharCount(); updateAiBtn();
+    }
+  } catch(e) {}
+  document.getElementById('transcribeLoading').classList.remove('show');
+}
+
+// ── UI ──
+function setUI(rec) {
+  const btn = document.getElementById('micBtn');
+  const label = document.getElementById('micLabel');
+  const timer = document.getElementById('micTimer');
+  const statusTimer = document.getElementById('statusTimer');
+  const bandDot = document.getElementById('bandDot');
+  const recLive = document.getElementById('recLive');
+  const recordingStatus = document.getElementById('recordingStatus');
+  if (rec) {
+    btn.classList.add('recording');
+    label.textContent = 'STOP';
+    timer.classList.add('visible');
+    bandDot.classList.add('recording');
+    recLive.classList.add('show');
+    recordingStatus.classList.add('show');
+  } else {
+    btn.classList.remove('recording');
+    label.textContent = 'START';
+    timer.classList.remove('visible');
+    timer.textContent = '0:00';
+    bandDot.classList.remove('recording');
+    recLive.classList.remove('show');
+    recordingStatus.classList.remove('show');
+    if (statusTimer) statusTimer.textContent = '0:00';
+  }
+}
+
+function updateCharCount() {
+  document.getElementById('charCount').textContent = document.getElementById('transcriptArea').value.length + '文字';
+}
+function updateAiBtn() {
+  document.getElementById('aiBtn').disabled = !document.getElementById('transcriptArea').value.trim();
+}
+document.getElementById('transcriptArea').addEventListener('input', () => {
+  accumulated = document.getElementById('transcriptArea').value;
+  updateCharCount(); updateAiBtn();
+});
+
+// ── AI清書 ──
+function buildPrompt(t) {
+  if (outputFormat === 'prose') {
+    return `あなたは介護支援専門員（ケアマネジャー）の記録をサポートするAIです。以下の音声入力テキストを支援経過記録またはモニタリング記録として清書してください。
+【ルール】
+- 介護保険・ケアマネジメントの現場に即した専門的な記録文体で書く
+- 人名（利用者・家族・事業所担当者の名前）は「●●様」「●●さん」に置き換える。ただし「ご様子」「お様子」「様式」「様相」「家族」「家庭」など一般的な言葉は置き換えない
+- 【】などの見出しは一切使わず、面談内容・調整経過・今後の方針などを自然な文章の流れでひとつながりに記述する
+- 丁寧な会話調（〜しました。〜でした。〜ありました。〜確認しました。〜調整しました。）で記述する
+- 箇条書きは絶対に使わない
+- Markdown記法（**、##、*など）は絶対に使わない
+- 不明確な部分は「（要確認）」と記載
+
+【音声入力】
+${t}
+
+【清書後の記録文】`;
+  } else {
+    return `あなたは介護支援専門員（ケアマネジャー）の記録をサポートするAIです。以下の音声入力テキストを支援経過記録またはモニタリング記録として清書してください。
+【ルール】
+- 介護保険・ケアマネジメントの現場に即した専門的な記録文体で書く
+- 人名（利用者・家族・事業所担当者の名前）は「●●様」「●●さん」に置き換える。ただし「ご様子」「お様子」「様式」「様相」「家族」「家庭」など一般的な言葉は置き換えない
+- 丁寧な会話調（〜しました。〜でした。〜ありました。〜確認しました。〜調整しました。）で記述する
+- 生活状況・心身状態・サービス利用状況・家族状況・連絡調整内容・今後の方針など、情報がある項目のみ【　】の見出しをつけて整理する
+- 各項目の内容は箇条書き（・）で簡潔に記述する
+- Markdown記法（**、##、*など）は絶対に使わない
+- 不明確な部分は「（要確認）」と記載
+
+【音声入力】
+${t}
+
+【清書後の記録文】`;
+  }
+}
+
+async function runAI() {
+  const text = document.getElementById('transcriptArea').value.trim();
+  if (!text) return;
+  const spinner = document.getElementById('aiSpinner');
+  const output = document.getElementById('aiOutput');
+  const btn = document.getElementById('aiBtn');
+  spinner.classList.add('show'); output.value = ''; btn.disabled = true;
+  try {
+    const res = await fetch('/api/chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ prompt: buildPrompt(text), role: 'nurse' })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    output.value = (data.text || '').replace(/\*\*/g,'').replace(/#{1,6} /g,'').replace(/\*/g,'');
+    showToast('AI清書が完了しました！');
+  } catch(e) {
+    output.placeholder = 'エラーが発生しました。';
+    showToast('AI清書に失敗しました');
+  } finally {
+    spinner.classList.remove('show'); btn.disabled = false; updateAiBtn();
+  }
+}
+
+// ── コピー・クリア ──
+async function copyText() {
+  const text = document.getElementById('aiOutput').value;
+  if (!text.trim()) { showToast('コピーするテキストがありません'); return; }
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast('AI清書をコピーしました');
+  } catch { showToast('コピーに失敗しました'); }
+}
+
+function clearAll() {
+  const t = document.getElementById('transcriptArea').value;
+  const a = document.getElementById('aiOutput').value;
+  if (!t && !a) return;
+  if (!confirm('テキストをクリアしますか？')) return;
+  accumulated = '';
+  document.getElementById('transcriptArea').value = '';
+  document.getElementById('aiOutput').value = '';
+  updateCharCount(); updateAiBtn();
+  showToast('クリアしました');
+}
+
+// ── Toast ──
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+updateCharCount(); updateAiBtn();
+</script>
+</body>
+</html>
